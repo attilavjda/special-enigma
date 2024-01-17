@@ -40,10 +40,17 @@ subordinating_conjugations = [
     "whenever",
 ]
 
-to_do = ["summarize", "make topic sentence", "make SPO"]
+to_do = ["summarize", "make topic sentence", "make SPO", "add appositive"]
 
 phases = ["plan", "draft", "revise", "edit"]
 
+transitions = [
+"Time—sequence of events or steps in a process",
+"Conclusion—summary, cause and effect, point of view, solution",
+"Illustration—give examples, support details, explain or elaborate on a statement",
+"Change of direction—contrasting thoughts",
+"Emphasis—prove a point or statement; reaffirm something previously stated",
+]
 
 @app.route("/")
 @app.route("/new")
@@ -56,7 +63,8 @@ def home():
         question_term = choice(q_terms),
         subordinating_conjunction = choice(subordinating_conjugations),
         to_do = choice(to_do),
-        phase = choice(phases)
+        phase = choice(phases),
+        transition = choice(transitions),
     )
 
 if __name__ == "__main__":
